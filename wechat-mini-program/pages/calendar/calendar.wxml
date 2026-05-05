@@ -1,0 +1,75 @@
+<view class="page">
+  <view class="header">
+    <text class="title">村务日历</text>
+    <view class="header-buttons">
+      <button class="view-btn" bind:tap="switchView">列表/海报</button>
+      <button class="filter-btn" bind:tap="openFilter">筛选</button>
+    </view>
+  </view>
+  <view class="content">
+    <!-- 列表视图 -->
+    <view class="list-view" wx:if="{{viewMode === 'list'}}">
+      <view class="timeline">
+        <view class="timeline-item" bind:tap="viewDetail">
+          <view class="timeline-date">2026-04-05</view>
+          <view class="timeline-content">
+            <text class="timeline-title">清明节</text>
+            <text class="timeline-desc">放假一天</text>
+          </view>
+        </view>
+        <view class="timeline-item" bind:tap="viewDetail">
+          <view class="timeline-date">2026-04-15</view>
+          <view class="timeline-content">
+            <text class="timeline-title">村务会议</text>
+            <text class="timeline-desc">讨论村庄发展规划</text>
+          </view>
+        </view>
+        <view class="timeline-item" bind:tap="viewDetail">
+          <view class="timeline-date">2026-04-20</view>
+          <view class="timeline-content">
+            <text class="timeline-title">党员活动日</text>
+            <text class="timeline-desc">学习党的最新理论</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 海报视图 -->
+    <view class="poster-view" wx:else>
+      <view class="poster-item" bind:tap="viewDetail">
+        <view class="poster-image"></view>
+        <text class="poster-title">清明节</text>
+        <text class="poster-date">2026-04-05</text>
+      </view>
+      <view class="poster-item" bind:tap="viewDetail">
+        <view class="poster-image"></view>
+        <text class="poster-title">村务会议</text>
+        <text class="poster-date">2026-04-15</text>
+      </view>
+      <view class="poster-item" bind:tap="viewDetail">
+        <view class="poster-image"></view>
+        <text class="poster-title">党员活动日</text>
+        <text class="poster-date">2026-04-20</text>
+      </view>
+    </view>
+    
+    <!-- 提醒设置 -->
+    <view class="reminder-setting">
+      <text class="reminder-title">提醒设置</text>
+      <view class="reminder-options">
+        <view class="reminder-option">
+          <text>提前1天</text>
+          <switch bindchange="toggleReminder" data-type="day" />
+        </view>
+        <view class="reminder-option">
+          <text>提前2小时</text>
+          <switch bindchange="toggleReminder" data-type="hour" />
+        </view>
+        <view class="reminder-option">
+          <text>提前30分钟</text>
+          <switch bindchange="toggleReminder" data-type="minute" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

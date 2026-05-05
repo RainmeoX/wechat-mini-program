@@ -1,0 +1,63 @@
+<view class="page">
+  <view class="header">
+    <text class="title">红色微课堂</text>
+    <view class="header-buttons">
+      <button class="mode-btn" bind:tap="toggleMode">长辈模式</button>
+      <button class="voice-btn" bind:tap="toggleVoice">语音播报</button>
+    </view>
+  </view>
+  <view class="content">
+    <!-- 视频播放区 -->
+    <view class="video-container">
+      <view class="video-placeholder" bind:tap="playVideo">
+        <text class="play-icon">▶</text>
+        <text class="video-title">红色故事：开国大典</text>
+      </view>
+    </view>
+    
+    <!-- 红色故事列表 -->
+    <view class="story-list">
+      <text class="list-title">红色故事列表</text>
+      <view class="story-item" bind:tap="playStory">
+        <text class="story-number">01</text>
+        <text class="story-name">开国大典</text>
+        <text class="story-duration">10:30</text>
+      </view>
+      <view class="story-item" bind:tap="playStory">
+        <text class="story-number">02</text>
+        <text class="story-name">长征精神</text>
+        <text class="story-duration">12:45</text>
+      </view>
+      <view class="story-item" bind:tap="playStory">
+        <text class="story-number">03</text>
+        <text class="story-name">抗美援朝</text>
+        <text class="story-duration">15:20</text>
+      </view>
+    </view>
+    
+    <!-- 红色资源导览 -->
+    <view class="navigation-section">
+      <text class="section-title">红色资源导览</text>
+      <view class="map-placeholder" bind:tap="openMap">
+        <text class="map-icon">🗺️</text>
+        <text class="map-text">点击查看红色地图</text>
+      </view>
+    </view>
+    
+    <!-- 学习激励 -->
+    <view class="incentive-section">
+      <text class="section-title">学习激励</text>
+      <view class="incentive-content">
+        <view class="points">
+          <text class="points-label">积分</text>
+          <text class="points-value">120</text>
+        </view>
+        <view class="check-in">
+          <text class="check-in-label">连续打卡</text>
+          <text class="check-in-value">5天</text>
+        </view>
+        <button class="check-in-btn" bind:tap="checkIn">打卡</button>
+      </view>
+    </view>
+  </view>
+</view>

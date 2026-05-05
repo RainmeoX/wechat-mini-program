@@ -1,0 +1,162 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+/* 顶部通知栏 */
+.notification-bar {
+  background-color: #c41e3a;
+  color: white;
+  padding: 15rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+/* 顶部轮播区 */
+.top {
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.title {
+  font-size: 33rpx;
+  font-weight: bold;
+  color: #c41e3a;
+}
+.more {
+  font-size: 28rpx;
+  color: #666;
+}
+.swiper {
+  width: 100%;
+  height: 400rpx; /* 适合16:9比例的图片 */
+  border-radius: 8rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 分隔线 */
+.divider {
+  width: 95%;
+  height: 2rpx;
+  background: #e8e8e8;
+  margin: 0 auto;
+}
+
+/* 核心功能区 */
+.bottom {
+  flex: 1;
+  padding: 0 20rpx 30rpx;
+  margin-bottom: 100rpx; /* 为底部导航栏留出空间 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.function-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rpx;
+  width: 100%;
+  height: 80%;
+}
+.function-item {
+  background: white;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  border: 1px solid #c41e3a;
+}
+.function-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+  color: #c41e3a;
+}
+.function-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #c41e3a;
+  text-align: center;
+}
+
+/* 悬浮式一键拨号按钮 */
+.call-float-btn {
+  position: fixed;
+  bottom: 150rpx;
+  right: 30rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #c41e3a;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+.btn-icon {
+  font-size: 60rpx;
+  margin-bottom: 10rpx;
+  color: white;
+}
+.btn-text {
+  font-size: 24rpx;
+  color: white;
+  font-weight: bold;
+}
+
+/* 底部导航栏 */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1rpx solid #e8e8e8;
+  z-index: 998;
+}
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+}
+.tab-item.active {
+  color: #c41e3a;
+}
+.tab-icon {
+  font-size: 40rpx;
+  margin-bottom: 5rpx;
+}
+.tab-text {
+  font-size: 24rpx;
+}
+
+/* 通用样式 */
+.red { color: #c41e3a; font-size: 22rpx; }
+.gray { color: #666; font-size: 22rpx; }

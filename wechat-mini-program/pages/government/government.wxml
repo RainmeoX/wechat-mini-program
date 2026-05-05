@@ -1,0 +1,72 @@
+<view class="page">
+  <view class="header">
+    <text class="title">村民通政务</text>
+    <view class="header-buttons">
+      <button class="mode-btn" bind:tap="toggleMode">长辈模式</button>
+      <button class="voice-btn" bind:tap="toggleVoice">语音播报</button>
+    </view>
+  </view>
+  <view class="content">
+    <!-- 搜索框 -->
+    <view class="search-bar">
+      <input class="search-input" placeholder="搜索政务服务" />
+      <button class="search-btn">搜索</button>
+    </view>
+    
+    <!-- 功能分区 -->
+    <view class="service-sections">
+      <!-- 政务办理 -->
+      <view class="section">
+        <text class="section-title">政务办理</text>
+        <view class="service-grid">
+          <view class="service-item" bind:tap="openService">
+            <view class="service-icon">📋</view>
+            <text class="service-name">证明开具</text>
+          </view>
+          <view class="service-item" bind:tap="openService">
+            <view class="service-icon">💰</view>
+            <text class="service-name">补贴申请</text>
+          </view>
+          <view class="service-item" bind:tap="openService">
+            <view class="service-icon">🏠</view>
+            <text class="service-name">住房信息</text>
+          </view>
+          <view class="service-item" bind:tap="openService">
+            <view class="service-icon">📅</view>
+            <text class="service-name">办事预约</text>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 村务公示 -->
+      <view class="section">
+        <text class="section-title">村务公示</text>
+        <view class="notice-list">
+          <view class="notice-item" bind:tap="viewNotice">
+            <text class="notice-date">2026-04-01</text>
+            <text class="notice-title">关于开展2026年度农村医疗保险缴费的通知</text>
+            <text class="notice-desc">请村民们按时缴纳医疗保险费用</text>
+          </view>
+          <view class="notice-item" bind:tap="viewNotice">
+            <text class="notice-date">2026-03-25</text>
+            <text class="notice-title">2026年春季征兵工作开始</text>
+            <text class="notice-desc">符合条件的青年可报名参加</text>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 民意上报 -->
+      <view class="section">
+        <text class="section-title">民意上报</text>
+        <button class="report-btn" bind:tap="openReport">一键上报</button>
+        <view class="report-list">
+          <view class="report-item">
+            <text class="report-date">2026-03-30</text>
+            <text class="report-content">村道损坏需要修复</text>
+            <text class="report-status">处理中</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

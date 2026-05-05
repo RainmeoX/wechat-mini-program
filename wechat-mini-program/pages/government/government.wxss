@@ -1,0 +1,179 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding-bottom: 120rpx;
+}
+
+/* 头部 */
+.header {
+  background-color: #c41e3a;
+  color: white;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.header-buttons {
+  display: flex;
+  gap: 10rpx;
+}
+.mode-btn, .voice-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 4rpx;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}
+
+/* 内容区 */
+.content {
+  padding: 20rpx;
+}
+
+/* 搜索框 */
+.search-bar {
+  display: flex;
+  margin-bottom: 30rpx;
+  gap: 10rpx;
+}
+.search-input {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #c41e3a;
+  border-radius: 4rpx;
+  padding: 15rpx;
+  font-size: 24rpx;
+}
+.search-btn {
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  border-radius: 4rpx;
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+/* 功能分区 */
+.service-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+/* 政务办理 */
+.section {
+  background-color: white;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #c41e3a;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+  border-left: 4rpx solid #c41e3a;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  border: 1px solid #c41e3a;
+}
+.service-icon {
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+  color: #c41e3a;
+}
+.service-name {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #c41e3a;
+}
+
+/* 村务公示 */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+.notice-item {
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  border-left: 4rpx solid #c41e3a;
+}
+.notice-date {
+  font-size: 20rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.notice-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.notice-desc {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 民意上报 */
+.report-btn {
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+.report-item {
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  border-left: 4rpx solid #c41e3a;
+}
+.report-date {
+  font-size: 20rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.report-content {
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.report-status {
+  font-size: 20rpx;
+  color: #c41e3a;
+  font-weight: bold;
+}
+
+/* 通用样式 */
+.gray-text {
+  color: #666;
+}

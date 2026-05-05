@@ -1,0 +1,75 @@
+<view class="page">
+  <!-- 顶部通知栏 -->
+  <view class="notification-bar">
+    <text class="notification-text">紧急通知：4月15日召开村务会议，请准时参加</text>
+  </view>
+  
+  <!-- 法治宣传图片轮播 -->
+  <view class="top">
+    <view class="top-bar">
+      <text class="title">法治宣传图片</text>
+      <text class="more">更多</text>
+    </view>
+    <swiper class="swiper" indicator-dots circular autoplay interval="3000">
+      <swiper-item>
+        <image src="/images/1.jpg" class="slide-image"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/2.jpg" class="slide-image"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/3.jpg" class="slide-image"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="divider"></view>
+
+  <!-- 核心功能区 -->
+  <view class="bottom">
+    <view class="function-grid">
+      <view class="function-item" bind:tap="goGovernment">
+        <view class="function-icon">🏛️</view>
+        <text class="function-name">村民通政务</text>
+      </view>
+      <view class="function-item" bind:tap="goRed">
+        <view class="function-icon">🔴</view>
+        <text class="function-name">红色微课堂</text>
+      </view>
+      <view class="function-item" bind:tap="goCalendar">
+        <view class="function-icon">📅</view>
+        <text class="function-name">村务日历</text>
+      </view>
+      <view class="function-item" bind:tap="goEmergency">
+        <view class="function-icon">⚠️</view>
+        <text class="function-name">紧急信息</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 悬浮式一键拨号按钮 -->
+  <view class="call-float-btn" bind:tap="goCall">
+    <view class="btn-icon">📞</view>
+    <text class="btn-text">一键拨号</text>
+  </view>
+
+  <!-- 底部导航栏 -->
+  <view class="tab-bar">
+    <view class="tab-item active" bind:tap="goHome">
+      <view class="tab-icon">🏠</view>
+      <text class="tab-text">首页</text>
+    </view>
+    <view class="tab-item" bind:tap="goCalendar">
+      <view class="tab-icon">📅</view>
+      <text class="tab-text">日历</text>
+    </view>
+    <view class="tab-item" bind:tap="goRed">
+      <view class="tab-icon">🔴</view>
+      <text class="tab-text">微课堂</text>
+    </view>
+    <view class="tab-item" bind:tap="goGovernment">
+      <view class="tab-icon">🏛️</view>
+      <text class="tab-text">政务</text>
+    </view>
+  </view>
+</view>

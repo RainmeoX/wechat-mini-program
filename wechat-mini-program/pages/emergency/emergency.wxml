@@ -1,0 +1,70 @@
+<view class="page">
+  <view class="header">
+    <text class="title">急救按铃</text>
+  </view>
+  <view class="content">
+    <!-- 紧急求助按钮 -->
+    <view class="emergency-button" bind:longpress="callEmergency">
+      <text class="button-icon">🆘</text>
+      <text class="button-text">紧急求助</text>
+      <text class="button-subtext">长按3秒触发</text>
+    </view>
+    
+    <!-- 紧急联系电话 -->
+    <view class="contact-list">
+      <text class="list-title">紧急联系电话</text>
+      <view class="contact-item" bind:tap="makeCall">
+        <text class="contact-icon">🩺</text>
+        <text class="contact-name">急救中心</text>
+        <text class="contact-number">120</text>
+      </view>
+      <view class="contact-item" bind:tap="makeCall">
+        <text class="contact-icon">👮</text>
+        <text class="contact-name">报警电话</text>
+        <text class="contact-number">110</text>
+      </view>
+      <view class="contact-item" bind:tap="makeCall">
+        <text class="contact-icon">🚒</text>
+        <text class="contact-name">消防电话</text>
+        <text class="contact-number">119</text>
+      </view>
+      <view class="contact-item" bind:tap="makeCall">
+        <text class="contact-icon">🏥</text>
+        <text class="contact-name">村卫生室</text>
+        <text class="contact-number">13800000000</text>
+      </view>
+    </view>
+    
+    <!-- 健康档案 -->
+    <view class="health-record">
+      <text class="section-title">健康档案</text>
+      <view class="health-info">
+        <text class="health-label">姓名：</text>
+        <text class="health-value">张三</text>
+      </view>
+      <view class="health-info">
+        <text class="health-label">年龄：</text>
+        <text class="health-value">65岁</text>
+      </view>
+      <view class="health-info">
+        <text class="health-label">血型：</text>
+        <text class="health-value">A型</text>
+      </view>
+      <view class="health-info">
+        <text class="health-label">病史：</text>
+        <text class="health-value">高血压</text>
+      </view>
+      <button class="edit-btn" bind:tap="editHealth">编辑档案</button>
+    </view>
+    
+    <!-- 救援记录 -->
+    <view class="rescue-record">
+      <text class="section-title">救援记录</text>
+      <view class="record-item">
+        <text class="record-date">2026-03-15</text>
+        <text class="record-content">突发高血压，已得到及时救治</text>
+        <text class="record-status">已完成</text>
+      </view>
+    </view>
+  </view>
+</view>
