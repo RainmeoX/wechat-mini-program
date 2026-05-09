@@ -1,0 +1,21 @@
+
+# WeChat Mini Program sensitive files
+project.private.config.json
+project.config.json
+
+# Build files
+node_modules
+dist
+build
+.cache
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
